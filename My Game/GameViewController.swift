@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     
     // MARK: - Outlets
     let scoreLabel = UILabel()
+    let restartButton = UIButton()
 
     // MARK: - Properties
     var duration = 5.0
@@ -30,8 +31,8 @@ class GameViewController: UIViewController {
         let ship = getShip()
         
         // Set ship coordinates
-        let x = 25
-        let y = 25
+        let x = Int.random(in: -25 ... 25)
+        let y = Int.random(in: -25 ... 25)
         let z = -120
         ship.position = SCNVector3(x, y, z)
         ship.look(at: SCNVector3(2 * x, 2 * y, 2 * z))
@@ -52,6 +53,23 @@ class GameViewController: UIViewController {
     func configureLayout() {
         let scnView = view as! SCNView
         
+        // Add button
+        let width: CGFloat = 200
+        let height = CGFloat(100)
+        let x = scnView.frame.midX - width / 2
+        let y = scnView.frame.midY - height / 2
+        
+        restartButton.backgroundColor = .red
+        restartButton.frame = CGRect(x: x, y: y, width: width, height: height)
+        restartButton.isHidden = true
+        restartButton.layer.cornerRadius = 15
+        restartButton.setTitle("New Game", for: .normal)
+        restartButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+        restartButton.titleLabel?.textColor = .yellow
+        
+        scnView.addSubview(restartButton)
+        
+        // Add label
         scoreLabel.font = UIFont.systemFont(ofSize: 30)
         scoreLabel.frame = CGRect(x: 0, y: 0, width: scnView.frame.width, height: 100)
         scoreLabel.textAlignment = .center
@@ -60,6 +78,9 @@ class GameViewController: UIViewController {
         scnView.addSubview(scoreLabel)
         
         score = 0
+        
+        // Add action for restart button tap
+        restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
     }
     
     func getShip() -> SCNNode {
@@ -75,7 +96,9 @@ class GameViewController: UIViewController {
     
     func newGame() {
         guard hit else {
-            print(#line, #function, "Game over")
+            DispatchQueue.main.async {
+                self.restartButton.isHidden = false
+            }
             return
         }
             
@@ -189,6 +212,15 @@ class GameViewController: UIViewController {
             
             SCNTransaction.commit()
         }
+    }
+    
+    @objc func restartButtonTapped() {
+        duration = 5
+        hit = true
+        restartButton.isHidden = true
+        score = 0
+        
+        newGame()
     }
     
     // MARK: - Computed Properties

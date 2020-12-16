@@ -12,6 +12,9 @@
 		69B0E3BF2588E3E9003744F3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B0E3BE2588E3E9003744F3 /* GameViewController.swift */; };
 		69B0E3C22588E3E9003744F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B0E3C02588E3E9003744F3 /* Main.storyboard */; };
 		69B0E3C42588E3EA003744F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B0E3C32588E3EA003744F3 /* Assets.xcassets */; };
+		69DFB357258A4D38005A431B /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB354258A4D37005A431B /* Screenshot01.png */; };
+		69DFB358258A4D38005A431B /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB355258A4D37005A431B /* Screenshot02.png */; };
+		69DFB359258A4D38005A431B /* Screenshot03.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB356258A4D38005A431B /* Screenshot03.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		69B0E3C12588E3E9003744F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69B0E3C32588E3EA003744F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69B0E3C52588E3EA003744F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69DFB354258A4D37005A431B /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
+		69DFB355258A4D37005A431B /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
+		69DFB356258A4D38005A431B /* Screenshot03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot03.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,23 @@
 			children = (
 				69B0E3BA2588E3E9003744F3 /* AppDelegate.swift */,
 				69B0E3BC2588E3E9003744F3 /* art.scnassets */,
-				69B0E3BE2588E3E9003744F3 /* GameViewController.swift */,
-				69B0E3C02588E3E9003744F3 /* Main.storyboard */,
 				69B0E3C32588E3EA003744F3 /* Assets.xcassets */,
+				69B0E3BE2588E3E9003744F3 /* GameViewController.swift */,
 				69B0E3C52588E3EA003744F3 /* Info.plist */,
+				69B0E3C02588E3E9003744F3 /* Main.storyboard */,
+				69DFB352258A4CEC005A431B /* Screenshots */,
 			);
 			path = "My Game";
+			sourceTree = "<group>";
+		};
+		69DFB352258A4CEC005A431B /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				69DFB354258A4D37005A431B /* Screenshot01.png */,
+				69DFB355258A4D37005A431B /* Screenshot02.png */,
+				69DFB356258A4D38005A431B /* Screenshot03.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +140,9 @@
 			files = (
 				69B0E3BD2588E3E9003744F3 /* art.scnassets in Resources */,
 				69B0E3C42588E3EA003744F3 /* Assets.xcassets in Resources */,
+				69DFB359258A4D38005A431B /* Screenshot03.png in Resources */,
+				69DFB357258A4D38005A431B /* Screenshot01.png in Resources */,
+				69DFB358258A4D38005A431B /* Screenshot02.png in Resources */,
 				69B0E3C22588E3E9003744F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

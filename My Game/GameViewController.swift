@@ -110,7 +110,12 @@ class GameViewController: UIViewController {
     }
     
     func removeShip() {
-        scene.rootNode.childNode(withName: "ship", recursively: true)?.removeFromParentNode()
+        var ship: SCNNode?
+        
+        repeat {
+            ship = scene.rootNode.childNode(withName: "ship", recursively: true)
+            ship?.removeFromParentNode()
+        } while ship != nil
     }
     
     // MARK: - Inherited Methods

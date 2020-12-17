@@ -15,6 +15,7 @@
 		69DFB357258A4D38005A431B /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB354258A4D37005A431B /* Screenshot01.png */; };
 		69DFB358258A4D38005A431B /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB355258A4D37005A431B /* Screenshot02.png */; };
 		69DFB359258A4D38005A431B /* Screenshot03.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB356258A4D38005A431B /* Screenshot03.png */; };
+		69DFB35C258A4E1C005A431B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69DFB35B258A4E1C005A431B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		69DFB354258A4D37005A431B /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
 		69DFB355258A4D37005A431B /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
 		69DFB356258A4D38005A431B /* Screenshot03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot03.png; sourceTree = "<group>"; };
+		69DFB35B258A4E1C005A431B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		69B0E3AE2588E3E9003744F3 = {
 			isa = PBXGroup;
 			children = (
+				69DFB35B258A4E1C005A431B /* README.md */,
 				69B0E3B92588E3E9003744F3 /* My Game */,
 				69B0E3B82588E3E9003744F3 /* Products */,
 			);
@@ -141,6 +144,7 @@
 				69B0E3BD2588E3E9003744F3 /* art.scnassets in Resources */,
 				69B0E3C42588E3EA003744F3 /* Assets.xcassets in Resources */,
 				69DFB359258A4D38005A431B /* Screenshot03.png in Resources */,
+				69DFB35C258A4E1C005A431B /* README.md in Resources */,
 				69DFB357258A4D38005A431B /* Screenshot01.png in Resources */,
 				69DFB358258A4D38005A431B /* Screenshot02.png in Resources */,
 				69B0E3C22588E3E9003744F3 /* Main.storyboard in Resources */,

@@ -83,45 +83,7 @@ class GameViewController: UIViewController {
         restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
     }
     
-    func getShip() -> SCNNode {
-        // Get the scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Get the ship
-        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
-        
-        // Return the ship
-        return ship
-    }
-    
-    func newGame() {
-        guard hit else {
-            DispatchQueue.main.async {
-                self.restartButton.isHidden = false
-            }
-            return
-        }
-            
-        // add ship to the scene
-        addShip()
-        
-        // increase difficulty
-        duration *= 0.9
-    }
-    
-    func removeShip() {
-        var ship: SCNNode?
-        
-        repeat {
-            ship = scene.rootNode.childNode(withName: "ship", recursively: true)
-            ship?.removeFromParentNode()
-        } while ship != nil
-    }
-    
-    // MARK: - Inherited Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func createScene() {
         // create a new scene
         scene = SCNScene(named: "art.scnassets/ship.scn")!
         
@@ -174,6 +136,49 @@ class GameViewController: UIViewController {
         
         // remove existing ship
         removeShip()
+    }
+    
+    func getShip() -> SCNNode {
+        // Get the scene
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // Get the ship
+        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        
+        // Return the ship
+        return ship
+    }
+    
+    func newGame() {
+        guard hit else {
+            DispatchQueue.main.async {
+                self.restartButton.isHidden = false
+            }
+            return
+        }
+            
+        // add ship to the scene
+        addShip()
+        
+        // increase difficulty
+        duration *= 0.9
+    }
+    
+    func removeShip() {
+        var ship: SCNNode?
+        
+        repeat {
+            ship = scene.rootNode.childNode(withName: "ship", recursively: true)
+            ship?.removeFromParentNode()
+        } while ship != nil
+    }
+    
+    // MARK: - Inherited Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // create a new scene
+        createScene()
         
         // start new game
         newGame()
@@ -224,6 +229,8 @@ class GameViewController: UIViewController {
         hit = true
         restartButton.isHidden = true
         score = 0
+        
+        createScene()
         
         newGame()
     }
